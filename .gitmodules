@@ -1,4 +1,0 @@
-[submodule "keycloak-source"]
-	path = keycloak-source
-	url = https://github.com/hugocortes/keycloak
-	branch = REL
