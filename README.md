@@ -28,3 +28,10 @@ cd extensions && mvn clean install && cd ../
 # run keycloak with standalone (relative to keycloak-4.8.3.Final/standalone/configuration)
 ./keycloak-4.8.3.Final/bin/standalone.sh -c ./../../../standalone-4.8.3.xml
 ```
+
+## Docker
+
+The docker setup was based off of [jboss-dockerfiles/keycloak](https://github.com/jboss-dockerfiles/keycloak/tree/master/server). Additional steps were added to add custom extension support.
+
+To build: `docker build -t <repo>/<name>:<tag> .`
+To push: `docker push <repo>/<name>`
