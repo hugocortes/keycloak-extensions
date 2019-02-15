@@ -5,7 +5,7 @@
 ###########################
 
 # Install Maven
-cd /opt/jboss 
+cd /opt/jboss
 curl -s http://apache.uib.no/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz | tar xz
 mv apache-maven-3.5.4 /opt/jboss/maven
 export M2_HOME=/opt/jboss/maven
@@ -22,11 +22,13 @@ tar xfz /opt/jboss/keycloak-source/distribution/server-dist/target/keycloak-*.ta
 mv /opt/jboss/keycloak-?.?.?.* /opt/jboss/keycloak
 
 # replace standalones
-rm /opt/jboss/keycloak/standalone/configuration/standalone.xml
-rm /opt/jboss/keycloak/standalone/configuration/standalone-ha.xml
+# rm /opt/jboss/keycloak/standalone/configuration/standalone.xml
+# rm /opt/jboss/keycloak/standalone/configuration/standalone-ha.xml
+# rm /opt/jboss/keycloak/domain/configuration/domain.xml
 
-mv /opt/jboss/standalone.xml /opt/jboss/keycloak/standalone/configuration/
-mv /opt/jboss/standalone-ha.xml /opt/jboss/keycloak/standalone/configuration/
+# mv /opt/jboss/standalone.xml /opt/jboss/keycloak/standalone/configuration/
+# mv /opt/jboss/standalone-ha.xml /opt/jboss/keycloak/standalone/configuration/
+# mv /opt/jboss/domain.xml /opt/jboss/keycloak/domain/configuration/
 
 # Build extensions
 cd /opt/jboss/extensions-source
