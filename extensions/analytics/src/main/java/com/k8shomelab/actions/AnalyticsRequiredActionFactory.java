@@ -1,4 +1,4 @@
-package me.hugocortes.actions.analytics;
+package com.k8shomelab.actions;
 
 import org.keycloak.Config;
 import org.keycloak.authentication.RequiredActionFactory;
@@ -6,7 +6,7 @@ import org.keycloak.authentication.RequiredActionProvider;
 import org.keycloak.models.KeycloakSession;
 import org.keycloak.models.KeycloakSessionFactory;
 
-public class AnalyticsStatsRequiredActionFactory implements RequiredActionFactory {
+public class AnalyticsRequiredActionFactory implements RequiredActionFactory {
 
     public static final String PROVIDER_ID = "user-analytics-action";
     public static final String PROVIDER_NAME = "User Analytics Action";

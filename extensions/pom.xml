@@ -4,13 +4,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.keycloak</groupId>
+    <groupId>com.k8shomelab</groupId>
     <artifactId>keycloak-extensions-parent</artifactId>
     <packaging>pom</packaging>
     <version>4.8.3.Final</version>
     <modules>
-        <module>actions</module>
+        <module>analytics</module>
     </modules>
 
-
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <keycloak-services.version>4.5.0.Final</keycloak-services.version>
+    </properties>
 </project>

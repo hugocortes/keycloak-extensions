@@ -1,4 +1,4 @@
-package me.hugocortes.actions.analytics;
+package com.k8shomelab.actions;
 
 import org.keycloak.authentication.RequiredActionContext;
 import org.keycloak.authentication.RequiredActionProvider;
@@ -46,7 +46,7 @@ public class AnalyticsRequiredActionProvider implements RequiredActionProvider {
             user.setAttribute(SIGN_UP_SOURCE, Collections.singletonList(source));
         }
 
-        user.removeRequiredAction(AnalyticsStatsRequiredActionFactory.PROVIDER_ID);
+        user.removeRequiredAction(AnalyticsRequiredActionFactory.PROVIDER_ID);
     }
 
     @Override
