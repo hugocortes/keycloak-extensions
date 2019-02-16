@@ -82,6 +82,7 @@ RUN /bin/sh /opt/jboss/tools/configure-extensions.sh
 RUN rm -rf /tmp/keycloak/extensions/*
 
 RUN chown -R 1000:0 /opt/jboss/keycloak
+RUN chown -R 1000:0 /tmp/keycloak
 RUN chmod -R g+rw /opt/jboss/keycloak
 
 ###################
