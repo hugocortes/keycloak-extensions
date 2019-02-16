@@ -4,8 +4,13 @@ services:
   - docker
 
 deploy:
-  skip_cleanup: true
-  provider: script
-  script: ./.travis-deploy.sh
-  on:
-    branch: master
+  - provider: script
+    skip_cleanup: true
+    script: Docker/travis-deploy-branch.sh
+    on:
+      all_branches: true
+  - provider: script
+    skip_cleanup: true
+    script: Docker/travis-deploy-tag.sh
+    on:
+      tags: true
