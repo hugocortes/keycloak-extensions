@@ -13,19 +13,6 @@ TEMP_DIR=/tmp/keycloak
 
 # Lower case DB_VENDOR
 DB_VENDOR=`echo $DB_VENDOR | tr A-Z a-z`
-# Detect DB vendor from legacy `*_ADDR` environment variables
-if [ "$DB_VENDOR" == "" ]; then
-    if (printenv | grep '^POSTGRES_ADDR=' &>/dev/null); then
-        export DB_VENDOR="postgres"
-    elif (printenv | grep '^MYSQL_ADDR=' &>/dev/null); then
-        export DB_VENDOR="mysql"
-    fi
-fi
-
-# Default to H2 if DB type not detected
-if [ "$DB_VENDOR" == "" ]; then
-    export DB_VENDOR="h2"
-fi
 
 # Set DB name
 case "$DB_VENDOR" in

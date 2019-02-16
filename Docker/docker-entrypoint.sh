@@ -59,10 +59,10 @@ fi
 ############
 # DB setup #
 ############
-. /opt/jboss/tools/databases/change-database.sh "$DB_VENDOR"
+/opt/jboss/tools/databases/change-database.sh "$DB_VENDOR"
 
-. /opt/jboss/tools/x509.sh
-. /opt/jboss/tools/jgroups.sh $JGROUPS_DISCOVERY_PROTOCOL $JGROUPS_DISCOVERY_PROPERTIES
+/opt/jboss/tools/x509.sh
+/opt/jboss/tools/jgroups.sh $JGROUPS_DISCOVERY_PROTOCOL $JGROUPS_DISCOVERY_PROPERTIES
 
 ##################
 # Start Keycloak #
