@@ -41,7 +41,9 @@ KEYCLOAK_CLI_DIR=$REPO_DIR/Docker/cli
 KEYCLOAK_TOOLS_DIR=$REPO_DIR/Docker
 KEYCLOAK_EXTENSION_DIR=$REPO_DIR/extensions
 KEYCLOAK_THEMES_DIR=$REPO_DIR/themes
-TEMP_DIR=/tmp
+TEMP_DIR=/tmp/keycloak
+rm -rf /tmp/keycloak
+mkdir /tmp/keycloak
 
 DB_VENDOR=${DB_VENDOR:-""}
 USE_EXISTING_BUILD=${USE_EXISTING_BUILD:-""}

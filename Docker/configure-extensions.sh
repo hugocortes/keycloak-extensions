@@ -7,7 +7,7 @@ KEYCLOAK_BUILD_DIR=$1
 
 KEYCLOAK_BUILD_DIR=${KEYCLOAK_BUILD_DIR:=/opt/jboss/keycloak}
 
-TEMP_DIR=/tmp
+TEMP_DIR=/tmp/keycloak
 EXTENSION_DIR=$TEMP_DIR/extensions
 THEMES_DIR=$TEMP_DIR/themes
 

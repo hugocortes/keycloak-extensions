@@ -1,6 +1,6 @@
 embed-server --server-config=standalone-ha.xml --std-out=echo
-run-batch --file=/tmp/loglevel.cli
-run-batch --file=/tmp/proxy.cli
-run-batch --file=/tmp/hostname.cli
-run-batch --file=/tmp/theme.cli
+run-batch --file=/tmp/keycloak/loglevel.cli
+run-batch --file=/tmp/keycloak/proxy.cli
+run-batch --file=/tmp/keycloak/hostname.cli
+run-batch --file=/tmp/keycloak/theme.cli
 stop-embedded-server

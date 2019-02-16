@@ -61,7 +61,7 @@ function autogenerate_keystores() {
   local JKS_TRUSTSTORE_PATH="${KEYSTORES_STORAGE}/${JKS_TRUSTSTORE_FILE}"
   local PASSWORD=$(openssl rand -base64 32 2>/dev/null)
   if [ -n "${X509_CA_BUNDLE}" ]; then
-    pushd /tmp >& /dev/null
+    pushd /tmp/keycloak >& /dev/null
     echo "Creating Keycloak truststore.."
     csplit -s -z -f crt- "${X509_CA_BUNDLE}" "${X509_CRT_DELIMITER}" '{*}'
     for CERT_FILE in crt-*; do

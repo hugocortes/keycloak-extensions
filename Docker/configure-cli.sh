@@ -7,7 +7,7 @@ KEYCLOAK_BUILD_DIR=$1
 
 KEYCLOAK_BUILD_DIR=${KEYCLOAK_BUILD_DIR:=/opt/jboss/keycloak}
 
-TEMP_DIR=/tmp
+TEMP_DIR=/tmp/keycloak
 
 cd $KEYCLOAK_BUILD_DIR
 bin/jboss-cli.sh --file=$TEMP_DIR/standalone-configuration.cli
