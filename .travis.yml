@@ -6,11 +6,11 @@ services:
 deploy:
   - provider: script
     skip_cleanup: true
-    script: Docker/travis-deploy-branch.sh
+    script: Docker/travis/deploy-on-branch.sh
     on:
       all_branches: true
   - provider: script
     skip_cleanup: true
-    script: Docker/travis-deploy-tag.sh
+    script: Docker/travis/deploy-on-tag.sh
     on:
       tags: true

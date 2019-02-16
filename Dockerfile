@@ -81,10 +81,15 @@ RUN /bin/sh /opt/jboss/tools/configure-cli.sh
 RUN /bin/sh /opt/jboss/tools/configure-extensions.sh
 RUN rm -rf /tmp/keycloak/extensions/*
 
+RUN chown -R 1000:0 /opt/jboss/keycloak
+RUN chmod -R g+rw /opt/jboss/keycloak
+
 ###################
 # Keycloak launch #
 ###################
 EXPOSE 8080
+
+USER 1000
 
 ENTRYPOINT [ "/opt/jboss/tools/docker-entrypoint.sh" ]
 
