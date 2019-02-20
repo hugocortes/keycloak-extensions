@@ -63,7 +63,8 @@ RUN mkdir -p /tmp/keycloak/extensions
 ENV MAVEN_OPTS="-Xms1024m -Xmx2048m"
 
 RUN cd extensions-source && mvn clean install && cd ../
-RUN mv extensions-source/**/target/*.jar /tmp/keycloak/extensions
+# RUN mv extensions-source/**/target/*.jar /tmp/keycloak/extensions
+RUN mv extensions-source/**/**/target/*.ear /tmp/keycloak/extensions
 RUN rm -rf extensions-source
 
 ##############################

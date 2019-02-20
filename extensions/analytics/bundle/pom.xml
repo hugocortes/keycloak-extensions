@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>keycloak-extensions-analytics</artifactId>
+        <groupId>com.k8shomelab</groupId>
+        <version>4.8.3.Final</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>keycloak-extensions-analytics-bundle</artifactId>
+    <packaging>ear</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.k8shomelab</groupId>
+            <artifactId>keycloak-extensions-analytics-module</artifactId>
+            <version>${keycloak.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>analytics</finalName>
+    </build>
+</project>

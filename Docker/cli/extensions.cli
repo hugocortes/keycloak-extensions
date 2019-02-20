@@ -2,8 +2,7 @@ embed-server --server-config=standalone-ha.xml --std-out=echo
 batch
 
 /subsystem=keycloak-server/:write-attribute(name=providers,value=[ \
-          classpath:${jboss.home.dir}/providers/*, \
-          module:keycloak-extensions-analytics \
+          classpath:${jboss.home.dir}/providers/* \
         ])
 
 run-batch
@@ -13,8 +12,7 @@ embed-server --server-config=standalone.xml --std-out=echo
 batch
 
 /subsystem=keycloak-server/:write-attribute(name=providers,value=[ \
-          classpath:${jboss.home.dir}/providers/*, \
-          module:keycloak-extensions-analytics \
+          classpath:${jboss.home.dir}/providers/* \
         ])
 
 run-batch

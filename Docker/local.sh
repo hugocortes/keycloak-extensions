@@ -61,6 +61,7 @@ cp -R $KEYCLOAK_THEMES_DIR/* $TEMP_DIR/themes
 # setup extension jar folder
 mkdir -p $TEMP_DIR/extensions
 rm -rf $TEMP_DIR/extensions/*.jar
+rm -rf $TEMP_DIR/extensions/*.ear
 
 #################################################
 # mvn installation keycloak source + extensions #
@@ -75,7 +76,8 @@ tar xfz $KEYCLOAK_SRC_DIR/distribution/server-dist/target/keycloak-*.tar.gz
 
 cd $KEYCLOAK_EXTENSION_DIR
 mvn clean install
-cp $KEYCLOAK_EXTENSION_DIR/**/target/*.jar $TEMP_DIR/extensions
+# cp $KEYCLOAK_EXTENSION_DIR/**/target/*.jar $TEMP_DIR/extensions
+cp $KEYCLOAK_EXTENSION_DIR/**/**/target/*.ear $TEMP_DIR/extensions
 
 ##############################
 # Keycloak cli configuration #
