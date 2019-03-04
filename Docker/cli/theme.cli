@@ -1,1 +1,3 @@
 /subsystem=keycloak-server/theme=defaults:write-attribute(name=welcomeTheme,value=${env.KEYCLOAK_WELCOME_THEME:keycloak})
+/subsystem=undertow/server=default-server/host=default-host/location=\/:remove()
+/subsystem=undertow/configuration=handler/file=welcome-content:remove()

@@ -76,7 +76,6 @@ tar xfz $KEYCLOAK_SRC_DIR/distribution/server-dist/target/keycloak-*.tar.gz
 
 cd $KEYCLOAK_EXTENSION_DIR
 mvn clean install
-# cp $KEYCLOAK_EXTENSION_DIR/**/target/*.jar $TEMP_DIR/extensions
 cp $KEYCLOAK_EXTENSION_DIR/**/**/target/*.ear $TEMP_DIR/extensions
 
 ##############################
@@ -90,6 +89,9 @@ cp $KEYCLOAK_EXTENSION_DIR/**/**/target/*.ear $TEMP_DIR/extensions
 
 # configure extensions and themes
 /bin/sh $KEYCLOAK_TOOLS_DIR/configure-extensions.sh $KEYCLOAK_BUILD_DIR
+
+# Local CLI
+$KEYCLOAK_BUILD_DIR/bin/jboss-cli.sh --file=$TEMP_DIR/local.cli
 
 #####################################
 # Keycloak pre-launch configuration #

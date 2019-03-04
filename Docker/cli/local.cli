@@ -1,0 +1,26 @@
+    
+embed-server --server-config=standalone-ha.xml --std-out=echo
+batch
+
+/subsystem=transactions:write-attribute(name=default-timeout,value=600)
+/system-property=jboss.as.management.blocking.timeout:add(value=600)
+
+/subsystem=keycloak-server/theme=defaults:write-attribute(name=staticMaxAge,value=-1)
+/subsystem=keycloak-server/theme=defaults:write-attribute(name=cacheThemes,value=false)
+/subsystem=keycloak-server/theme=defaults:write-attribute(name=cacheTemplates,value=false)
+
+run-batch
+stop-embedded-server
+
+embed-server --server-config=standalone.xml --std-out=echo
+batch
+
+/subsystem=transactions:write-attribute(name=default-timeout,value=600)
+/system-property=jboss.as.management.blocking.timeout:add(value=600)
+
+/subsystem=keycloak-server/theme=defaults:write-attribute(name=staticMaxAge,value=-1)
+/subsystem=keycloak-server/theme=defaults:write-attribute(name=cacheThemes,value=false)
+/subsystem=keycloak-server/theme=defaults:write-attribute(name=cacheTemplates,value=false)
+
+run-batch
+stop-embedded-server
