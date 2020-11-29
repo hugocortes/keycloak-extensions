@@ -1,0 +1,15 @@
+#kc-logo-wrapper {
+  background-image: url(../img/logo-text-300x63.png);
+  background-repeat: no-repeat;
+  height: 63px;
+  width: 300px;
+  margin: 62px auto 0;
+}
+
+div.kc-logo-text {
+  background-image: url(../img/logo-text-300x63.png);
+  background-repeat: no-repeat;
+  height: 63px;
+  width: 300px;
+  margin: 0 auto;
+}
