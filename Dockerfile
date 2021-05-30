@@ -1,4 +1,4 @@
-FROM jboss/keycloak:12.0.4 as keycloak
+FROM jboss/keycloak:13.0.1 as keycloak
 
 ENV MAVEN_OPTS -Xms1024m -Xmx2048m
 SHELL [ "/bin/bash", "-c" ]
